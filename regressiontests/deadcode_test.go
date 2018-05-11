@@ -12,7 +12,7 @@ func test() {
 }
 `
 	expected := Issues{
-		{Linter: "deadcode", Severity: "warning", Path: "test.go", Line: 3, Col: 1, Message: "test is unused"},
+		{Linter: "deadcode", Severity: "warning", Path: "test.go", Line: 3, Col: 6, Message: "test is unused"},
 	}
 	ExpectIssues(t, "deadcode", source, expected)
 }
